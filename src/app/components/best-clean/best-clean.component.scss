@@ -1,0 +1,64 @@
+@import "src/assets/style/global";
+
+
+.shape {
+  &-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    @include media-breakpoint-down(md) {
+      max-width: 40px;
+    }
+  }
+  &-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    @include media-breakpoint-down(md) {
+      max-width: 40px;
+    }
+  }
+  &-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    @include media-breakpoint-down(md) {
+      max-width: 40px;
+    }
+  }
+  &-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    @include media-breakpoint-down(md) {
+      max-width: 40px;
+    }
+  }
+}
+
+
+.swiper {
+  width: 100%;
+  // height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:host ::ng-deep .swiper-slide iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

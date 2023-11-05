@@ -1,0 +1,51 @@
+@import "src/assets/style/global";
+
+.theApp-main {
+  width: 100%;
+  min-height: calc(100vh - 134px);
+  padding-top: rem(80px);
+  @include media-breakpoint-down(md) {
+    padding-top: rem(60px);
+  }
+  &-background {
+    background: #D6E3EC;
+  }
+  &-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 10rem;
+    @include media-breakpoint-down(sm) {
+      top: 14rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 999999;
+    li {
+
+      padding: rem(60px);
+      width: rem(120px);
+      height: rem(120px);
+      @include media-breakpoint-down(sm) {
+        padding: rem(25px);
+        width: rem(50px);
+        height: rem(50px);
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000304;
+      box-shadow: inset 0 0 20px #00524f;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

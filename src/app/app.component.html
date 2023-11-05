@@ -1,0 +1,74 @@
+<div class="theApp">
+  <app-header
+    [navbarIcons]="data?.navbar_icons"
+    [navbarColor]="data?.navbar_color"
+    [fontColor]="data?.font_color"
+    [logoPath]="data?.logo_path"
+    [title]="data?.title"
+    [titleAr]="data?.title_ar"
+  ></app-header>
+  <div class="theApp-main">
+    <app-best-clean
+      [sliderElements]="data?.slider_elements"
+      [fontColor]="data?.font_color"
+    ></app-best-clean>
+    <app-our
+      [leftSectionTitle]="data?.left_section_title"
+      [leftSectionDescription]="data?.left_section_description"
+      [rightSectionTitle]="data?.right_section_title"
+      [rightSectionDescripiton]="data?.right_section_descripiton"
+      [leftSectionTitleAr]="data?.left_section_title_ar"
+      [leftSectionDescriptionAr]="data?.left_section_description_ar"
+      [rightSectionTitleAr]="data?.right_section_title_ar"
+      [rightSectionDescripitonAr]="data?.right_section_descripiton_ar"
+      [fontColor]="data?.font_color"
+    ></app-our>
+    <app-home-images
+      *ngIf="data?.images"
+      [images]="data?.images"
+      [firstSectionTitle]="data?.first_section_title"
+      [firstSectionTitleAr]="data?.first_section_title_ar"
+      [firstSectionDescription]="data?.first_section_description"
+      [firstSectionDescriptionAr]="data?.first_section_description_ar"
+    ></app-home-images>
+    <app-stories
+      *ngIf="stories"
+      [stories]="stories"
+      [fontColor]="data?.font_color"
+    ></app-stories>
+    <app-reviews
+      *ngIf="data?.reviews"
+      [reviews]="data?.reviews"
+    >
+    </app-reviews>
+    <app-cleaning-services
+      [services]="data?.services"
+      [fontColor]="data?.font_color"
+    ></app-cleaning-services>
+    <app-home-videos
+      *ngIf="data?.videos"
+      [videos]="data?.videos"
+    >
+    </app-home-videos>
+    <app-contact-us
+      [fontColor]="data?.font_color"
+    >
+    </app-contact-us>
+    <app-footer
+      [footerIcons]="data?.footer_icons"
+      [fontColor]="data?.font_color"
+    ></app-footer>
+    <ul class="theApp-main-icons">
+      <li>
+        <a href="https://wa.me/your-phone-number" title="whatsapp">
+          <svg-icon src="assets/icons/whatsapp.svg" class="fs-xxl"></svg-icon>
+        </a>
+      </li>
+      <li>
+        <a href="tel:your-phone-number" title="phone">
+          <svg-icon src="assets/icons/phone.svg" class="fs-xxl"></svg-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
